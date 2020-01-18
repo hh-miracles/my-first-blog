@@ -14,7 +14,15 @@
 <div>
 <p> We Help You To Choose The Best </p></div>
 <p> We are a group that provides you the things you need the most in an affordable price. Visit the link below to see our selling products. </p>
-<div></div>
+<div>
+    {% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
+</div>
 
 <h3> WHAT ARE THE SERVICES WE GIVE? </h3>
 
